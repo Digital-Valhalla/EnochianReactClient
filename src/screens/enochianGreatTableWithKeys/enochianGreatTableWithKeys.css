@@ -1,0 +1,19 @@
+.enochian-great-table-with-keys-parent{
+    display: grid;
+    grid-template-columns: 3fr 5fr 1fr 3fr;
+    background-color: #16161d;
+}
+
+.enochian-great-table-with-keys-child{
+    grid-column: span 1
+}
+
+.enochian-great-table-with-keys-full-row{
+    grid-column: span 4
+}
+
+.enochian-great-table-with-keys-two-rows{
+    grid-row: span 2
+}
+
+

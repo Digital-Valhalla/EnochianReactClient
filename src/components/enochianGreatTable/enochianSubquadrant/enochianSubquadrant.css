@@ -1,0 +1,13 @@
+.enochian-subquadrant-parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+  
+.enochian-subquadrant-child {
+    grid-column: span 1;
+    grid-row-gap: 0px;
+    border: solid;
+    border-width: 1px;
+}

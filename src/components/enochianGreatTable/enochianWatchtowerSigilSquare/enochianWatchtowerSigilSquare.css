@@ -1,0 +1,89 @@
+.english-font {
+    font-family: 'Tempus Sans ITC';
+    font-size: small;
+}
+
+.enochian-font {
+    font-family: 'Enochian';
+    font-size: large;
+}
+
+.enochian-font-svg {
+    font-family: 'Enochian';
+    font-size: 85px;
+    fill: black
+}
+
+.enochian-font-svg-red {
+    font-family: 'Enochian';
+    font-size: 85px;
+    fill: red
+}
+
+.enochian-font-svg-white{
+    font-family: 'Enochian';
+    font-size: 85px;
+    fill: antiquewhite
+}
+
+.enochian-font-svg-black {
+    font-family: 'Enochian';
+    font-size: 85px;
+    fill: black
+}
+
+.enochian-font-svg-green {
+    font-family: 'Enochian';
+    font-size: 85px;
+    fill: yellowgreen
+}
+
+.OLPAGED{
+    border-color: red;
+    fill: red;
+}
+.ZIRACAH{
+    border-color: blue;
+    fill: blue;
+}
+
+.HONONOL{
+    border-color: blueviolet;
+    fill: blueviolet
+}
+.ZARNAAH{
+    border-color: greenyellow;
+    fill: greenyellow;
+}
+.GEBABAL{
+    border-color: yellow;
+    fill: yellow;
+}
+.ZVRCHOL{
+    border-color: orange;
+    fill: orange;
+}
+.ALPVDVS{
+    border-color: lightgray;
+    fill: lightgray;
+}
+.CADAAMP{
+    border-color: white;
+    fill: white;
+}
+.ZARZILG{
+    border-color: lightgreen;
+    fill: lightgreen;
+}
+.LAVAVOTH{
+    border-color: darkred;
+    fill: darkred;
+}
+.ZINGGEN{
+    border-color: midnightblue;
+    fill: midnightblue;
+}
+.ARFAOLG{
+    border-color: moccasin;
+    fill: moccasin;
+}

@@ -1,0 +1,69 @@
+.enochian-governor-sigil-table{
+    border-collapse: collapse;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.enochian-governor-sigil-td{
+    margin: "0"; 
+    padding: "0"; 
+    border: solid; 
+    border-width: 1px;
+
+}
+
+.OLPAGED{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ZIRACAH{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.HONONOL{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ZARNAAH{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.GEBABAL{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ZVRCHOL{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ALPVDVS{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.CADAAMP{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ZARZILG{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.LAVAVOTH{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ZINGGEN{
+    border-color: moccasin;
+    fill: moccasin;
+}
+.ARFAOLG{
+    border-color: moccasin;
+    fill: moccasin;
+}
+
+.enochian-font-svg-red {
+    font-family: 'Enochian';
+    font-size: 85px;
+    fill: red
+}

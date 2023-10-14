@@ -1,0 +1,17 @@
+.enochian-watchtower-parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+  
+.enochian-watchtower-subquadrant-child-span {
+    grid-column: span 5;
+}
+
+.enochian-watchtower-senior-child-span {
+    grid-column: span 1;
+    grid-row: span 6;
+}
+
+.enochian-watchtower-godname-child-span {
+    grid-column: span 12;
+}

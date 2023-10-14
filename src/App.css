@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Enochian';
+  src: local('Enochian'), url(./fonts/Enochian.otf) format('opentype');
+}
+
+.app-parent {
+  display: grid;
+  grid-template-columns: 1fr
+}
+
+.app-child {
+  grid-column: span 5;
+}

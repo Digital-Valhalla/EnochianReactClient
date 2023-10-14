@@ -1,0 +1,21 @@
+.enochian-subquadrant-info-panel{
+    
+    margin-right: 5px;
+    background-color: #16161d;
+    color:antiquewhite;
+}
+
+.enochian-info-panel-govenor-parent{
+    display: grid ;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+.enochian-info-panel-govenor-child {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.enochian-info-panel-govenor-child-comments {
+    grid-column: span 5;
+    grid-row: span 1;
+}

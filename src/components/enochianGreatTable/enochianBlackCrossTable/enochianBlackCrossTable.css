@@ -1,0 +1,11 @@
+.enochian-blackcross-table-parent {
+    display: grid;
+    grid-template-columns: 1;
+}
+  
+.enochian-blackcross-table-child {
+    grid-column: span 1;
+    background-color: #1f1f1f;
+    border: solid;
+    border-width: 1px;
+}

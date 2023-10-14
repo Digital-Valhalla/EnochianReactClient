@@ -1,0 +1,38 @@
+.enochian-sub-order-info-panel{
+    
+    background-color: #1F1F1F;/* #16161d; */
+    color: yellowgreen;
+    margin-right: 0px;
+}
+
+.enochian-info-panel-sub-order-parent{
+    display: grid ;
+    border-bottom: solid;
+    border-width: 1px;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+.enochian-info-panel-sub-order-child {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.enochian-info-panel-sub-order-child-two-column {
+    grid-column: span 2;
+    grid-row: span 1;
+    text-align: center;
+}
+
+.enochian-info-panel-sub-order-comments {
+    grid-column: span 5;
+    grid-row: span 1;
+    text-align: center;
+    display: table-cell;
+    margin:auto;
+    color:antiquewhite;
+}
+
+
+.enochian-info-panel-partOfEarthImposedByGod{
+    color: antiquewhite
+}

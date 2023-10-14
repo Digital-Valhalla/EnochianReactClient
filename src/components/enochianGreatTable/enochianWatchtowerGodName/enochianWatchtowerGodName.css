@@ -1,0 +1,10 @@
+.enochian-watchtower-godname-parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+  
+.enochian-watchtower-godname-child {
+    grid-column: span 1;
+    border: solid;
+    border-width: 1px;
+}

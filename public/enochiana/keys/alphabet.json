@@ -1,0 +1,209 @@
+[
+    {
+        "Letter": "A",
+        "Gematria": 6,
+        "LetterName": "Un",
+        "Family": "Pa",
+        "Number": 6,
+        "GreekLetter": "Alpha"
+    },
+    {
+        "Letter": "B",
+        "Gematria": 1,
+        "LetterName": "Pa",
+        "Family": "Pa",
+        "Number": 1,
+        "GreekLetter": "Vi"
+    },
+    {
+        "Letter": "C",
+        "Gematria": 2,
+        "LetterName": "Veh",
+        "Family": "Pa",
+        "Number": 2,
+        "GreekLetter": "Vita"
+    },
+    {
+        "Letter": "D",
+        "Gematria": 4,
+        "LetterName": "Gal",
+        "Family": "Pa",
+        "Number": 4,
+        "GreekLetter": "Xi"
+    },
+    {
+        "Letter": "E",
+        "Gematria": 7,
+        "LetterName": "Graph",
+        "Family": "Pa",
+        "Number": 7,
+        "GreekLetter": "Lamda"
+    },
+    {
+        "Letter": "F",
+        "Gematria": 5,
+        "LetterName": "Or",
+        "Family": "Pa",
+        "Number": 6,
+        "GreekLetter": "Digamma"
+    },
+    {
+        "Letter": "G",
+        "Gematria": 3,
+        "LetterName": "Ged",
+        "Family": "Pa",
+        "Number": 3,
+        "GreekLetter": "Vita"
+    },
+    {
+        "Letter": "H",
+        "Gematria": 10,
+        "LetterName": "Na",
+        "Family": "Tal",
+        "Number": 10,
+        "GreekLetter": "Omega"
+    },
+    {
+        "Letter": "I",
+        "Gematria": 60,
+        "LetterName": "Gon",
+        "Family": "Tal",
+        "Number": 9,
+        "GreekLetter": "Zita"
+    },
+    {
+        "Letter": "J",
+        "Gematria": 60,
+        "LetterName": "Gon",
+        "Family": "Tal",
+        "Number": 9,
+        "GreekLetter": "ZIta"
+    },
+    {
+        "Letter": "K",
+        "Gematria": 2,
+        "LetterName": "Veh",
+        "Family": "Pa",
+        "Number": 2,
+        "GreekLetter": "Vita"
+    },
+    {
+        "Letter": "L",
+        "Gematria": 20,
+        "LetterName": "Ur",
+        "Family": "Tal",
+        "Number": 11,
+        "GreekLetter": "Epsilon"
+    },
+    {
+        "Letter": "M",
+        "Gematria": 90,
+        "LetterName": "Tal",
+        "Family": "Tal",
+        "Number": 8,
+        "GreekLetter": "Xi"
+    },
+    {
+        "Letter": "N",
+        "Gematria": 50,
+        "LetterName": "Drux",
+        "Family": "Tal",
+        "Number": 14,
+        "GreekLetter": "Psi"
+    },
+    {
+        "Letter": "O",
+        "Gematria": 30,
+        "LetterName": "Med",
+        "Family": "Pal",
+        "Number": 16,
+        "GreekLetter": "Ni"
+    },
+    {
+        "Letter": "P",
+        "Gematria": 9,
+        "LetterName": "Mals",
+        "Family": "Tal",
+        "Number": 12,
+        "GreekLetter": "Omega"
+    },
+    {
+        "Letter": "Q",
+        "Gematria": 40,
+        "LetterName": "Ger",
+        "Family": "Tal",
+        "Number": 13,
+        "GreekLetter": "Pi"
+    },
+    {
+        "Letter": "R",
+        "Gematria": 100,
+        "LetterName": "Don",
+        "Family": "Pal",
+        "Number": 17,
+        "GreekLetter": "Epsilon"
+    },
+    {
+        "Letter": "S",
+        "Gematria": 200,
+        "LetterName": "Fam",
+        "Family": "Pal",
+        "Number": 20,
+        "GreekLetter": "Taf"
+    },
+    {
+        "Letter": "T",
+        "Gematria": 300,
+        "LetterName": "Gisg",
+        "Family": "Pal",
+        "Number": 21,
+        "GreekLetter": "Iota"
+    },
+    {
+        "Letter": "U",
+        "Gematria": 70,
+        "LetterName": "Van",
+        "Family": "Pal",
+        "Number": 19,
+        "GreekLetter": "Lamda"
+    },
+    {
+        "Letter": "V",
+        "Gematria": 70,
+        "LetterName": "Van",
+        "Family": "Pal",
+        "Number": 19,
+        "GreekLetter": "Lamda"
+    },
+    {
+        "Letter": "W",
+        "Gematria": 70,
+        "LetterName": "Van",
+        "Family": "Pal",
+        "Number": 19,
+        "GreekLetter": "Lamda"
+    },
+    {
+        "Letter": "X",
+        "Gematria": 80,
+        "LetterName": "Pal",
+        "Family": "Pal",
+        "Number": 15,
+        "GreekLetter": "Gama"
+    },
+    {
+        "Letter": "Y",
+        "Gematria": 60,
+        "LetterName": "Gon",
+        "Family": "Tal",
+        "Number": 9,
+        "GreekLetter": "Zita"
+    },
+    {
+        "Letter": "Z",
+        "Gematria": 8,
+        "LetterName": "Ceph",
+        "Family": "Pal",
+        "Number": 18
+    }
+]

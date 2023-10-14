@@ -1,0 +1,53 @@
+.english-font {
+    font-family: 'Tempus Sans ITC';
+    font-size: small;
+}
+
+.enochian-font {
+    font-family: 'Enochian';
+    font-size: large;
+}
+
+.enochian-font-svg {
+    font-family: 'Enochian';
+    font-size: 85px;
+}
+
+.info-text{
+    font-family: 'Tempus Sans ITC';
+    font-size: small;
+}
+
+.square{
+    height:24px; 
+    width:24px;
+}
+
+.visible-square{
+    visibility: visible;
+}
+
+.hidden-square{
+    visibility: hidden;
+}
+
+.highlite-square{
+    background-color: lemonchiffon;
+}
+
+.aethyr-highlite-square{
+    
+}
+
+.selected-square{
+    background-color: yellow;
+    fill: black;
+}
+
+.entity-type-senior{
+    background-color: gray
+}
+
+.entity-type-calvarycross{
+    background-color: antiquewhite
+}

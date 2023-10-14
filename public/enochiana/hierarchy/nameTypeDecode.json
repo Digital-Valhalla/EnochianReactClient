@@ -1,0 +1,72 @@
+[
+    {
+        "NameType": 1,
+        "NameTypeCategory": "HolyName",
+        "NameTypeLength": 12
+    },
+    {
+        "NameType": 2,
+        "NameTypeCategory": "GreatKing",
+        "NameTypeLength": 8
+    },
+    {
+        "NameType": 3,
+        "NameTypeCategory": "Senior",
+        "NameTypeLength": 7
+    },
+    {
+        "NameType": 4,
+        "NameTypeCategory": "CalvaryCrossGodName",
+        "NameTypeLength": 6
+    },
+    {
+        "NameType": 5,
+        "NameTypeCategory": "CalvaryCrossAngel (5 letters)",
+        "NameTypeLength": 5
+    },
+    {
+        "NameType": 6,
+        "NameTypeCategory": "CalvaryCrossAngelAlternate (4 letters)",
+        "NameTypeLength": 4
+    },
+    {
+        "NameType": 7,
+        "NameTypeCategory": "CalvaryCrossGodNameReversed",
+        "NameTypeLength": 6
+    },
+    {
+        "NameType": 8,
+        "NameTypeCategory": "CalvaryCrossCacodemon",
+        "NameTypeLength": 3
+    },
+    {
+        "NameType": 9,
+        "NameTypeCategory": "BlackCrossGodName",
+        "NameTypeLength": 5
+    },
+    {
+        "NameType": 10,
+        "NameTypeCategory": "BlackCrossAngel",
+        "NameTypeLength": 4
+    },
+    {
+        "NameType": 11,
+        "NameTypeCategory": "Govenor",
+        "NameTypeLength": 7
+    },
+    {
+        "NameType": 12,
+        "NameTypeCategory": "HeptarchyKing",
+        "NameTypeLength": 7
+    },
+    {
+        "NameType": 13,
+        "NameTypeCategory": "HeptarchyPrince",
+        "NameTypeLength": 7
+    },
+    {
+        "NameType": 14,
+        "NameTypeCategory": "HeptarchyMinister",
+        "NameTypeLength": 7
+    }
+]

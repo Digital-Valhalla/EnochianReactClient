@@ -1,0 +1,11 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+.child-span {
+    float: left;
+    grid-column: span 1;
+    color: whitesmoke
+}
+

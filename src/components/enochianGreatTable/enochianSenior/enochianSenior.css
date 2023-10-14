@@ -1,0 +1,10 @@
+.enochian-senior-parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+  
+.enochian-senior-child {
+    grid-column: span 1;
+    border: solid;
+    border-width: 1px;
+}

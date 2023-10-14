@@ -1,0 +1,11 @@
+.enochian-aethyr-info-panel{
+    
+    background-color: #16161d;
+    color:antiquewhite;
+    margin-right: 0px;
+}
+
+.enochian-aethyr-info-parent{
+    display: grid ;
+    grid-template-columns: repeat(5, 1fr)
+}

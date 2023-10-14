@@ -1,0 +1,25 @@
+.enochian-great-table-parent {
+    display: grid ;
+    grid-template-columns: 2fr 10fr 1fr 10fr 2fr;
+    background-color: #16161d;
+}
+
+.enochian-great-table-full-row{
+    grid-column: span 5
+}
+
+.enochian-great-table-header-footer-row{
+    grid-column: span 3
+}
+
+.enochian-great-table-one-column{
+    grid-column: span 1
+}
+
+.enochian-great-table-child {
+    float: left;
+    grid-column: span 1;
+}
+
+
+  
