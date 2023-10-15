@@ -12,6 +12,7 @@ import EnochianKey from "../../components/enochianKey/enochianKey"
 import "./enochianGreatTableWithKeys.css"
 import EnochianSubOrderInfoPanel from "../../components/infoPanels/enochianSubOrderInfoPanel/enochianSubOrderInfoPanel"
 import EnochianWatchTowerLayoutSelector from "../../components/analysisControls/enochianWatchTowerLayoutSelector/enochianWatchTowerLayoutSelector"
+import EnochianAethyrInfoEditPanel from "../../components/infoPanels/enochianAethryInfoEditPanel/enochianAethyrInfoEditPanel"
 const EnochianGreatTableWithKeysScreen = () => {
     const isEditSigilDialogOpen = useRef<boolean>(false)
     const [selectedKey, setSelectedKey] = useState(0)
@@ -37,7 +38,7 @@ const EnochianGreatTableWithKeysScreen = () => {
             {/* row 1*/}
 
             <div className="enochian-great-table-with-keys-two-rows" style={{border: "solid", borderWidth: "1px"}}>
-                <EnochianAethyrInfoPanel/>
+                <EnochianAethyrInfoEditPanel/>
             </div>
 
             <div className="enochian-great-table-with-keys-child" style={{border: "solid", borderWidth: "1px"}}>

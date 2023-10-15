@@ -1,9 +1,8 @@
-import { ChangeEvent, useContext, useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import EnochianWatchtower from "./enochianWatchtower/enochianWatchtower"
 
 
-import { EnochianAnalysisActionType, EnochianAnalysisContext, EnochianAnalysisWatchTowerLayoutType, IEnochianAnalysisAction } from "../../contexts/enochianWatchtowerAnalysis.context"
-import { EnochianDataContext } from "../../contexts/enochianData.context"
+import { EnochianAnalysisContext, EnochianAnalysisWatchTowerLayoutType } from "../../contexts/enochianWatchtowerAnalysis.context"
 import EnochianBlackCrossVertical from "./enochianBlackCrossVertical/enochianBlackCrossVertical"
 import EnochianBlackCrossHorizontal from "./enochianBlackCrossHorizontal/enochianBlackCrossHorizontal"
 
@@ -29,7 +28,7 @@ const defaultWatchTowerArrangement: watchTowerArrangement = {
     bottomRight: 4
 }
 const EnochianGreatTable = () =>{
-    const { enochianAnalysisState, enochianAnalysisDispatch } = useContext(EnochianAnalysisContext)
+    const { enochianAnalysisState } = useContext(EnochianAnalysisContext)
     const [watchTowerArrangement, setWatchtowerArrangement] = useState<watchTowerArrangement>(defaultWatchTowerArrangement)
 
     useEffect(()=>{

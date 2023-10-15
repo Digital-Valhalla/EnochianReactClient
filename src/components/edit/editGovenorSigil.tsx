@@ -41,6 +41,11 @@ const EditSquareGovenorSigil = ({ isOpen, hasCloseBtn, onClose, children, square
     const [status, setStatus] = useState<SigilStatus>()
     const enochianData = useContext(EnochianDataContext)
     const { enochianAnalysisState, enochianAnalysisDispatch } = useContext(EnochianAnalysisContext)
+
+    const aethryRef = useRef<HTMLInputElement>(null)
+    const subOrderRef = useRef<HTMLInputElement>(null)
+    const charNumberRef = useRef<HTMLInputElement>(null)
+
     const originalTableLetterRef = useRef<HTMLInputElement>(null)
     const reformedTableLetterRef = useRef<HTMLInputElement>(null)
     const governorAlignedTableLetterRef = useRef<HTMLInputElement>(null)
@@ -88,6 +93,9 @@ const EditSquareGovenorSigil = ({ isOpen, hasCloseBtn, onClose, children, square
             reformedTableIsUpper: square?.ReformedTableIsUpper as boolean ?? '',
             governorAlignedTableLetter: square?.GovernorAlignedTableLetter as string ?? '',
             governorAlignedTableIsUpper: square?.GovernorAlignedTableIsUpper as boolean ?? '',
+            aethry: square?.AethyrNumber,
+            subOrder: square?.SubOrder,
+            charNumber: square?.CharNumber,
         })
 
         if(originalTableLetterRef.current)
@@ -107,6 +115,15 @@ const EditSquareGovenorSigil = ({ isOpen, hasCloseBtn, onClose, children, square
 
         if(governorAlignedTableIsUpperRef.current)
             governorAlignedTableIsUpperRef.current.checked = square?.GovernorAlignedTableIsUpper as boolean ?? false
+    
+        if(aethryRef.current)
+            aethryRef.current.value = `${square?.AethyrNumber ?? ''}` 
+
+        if(subOrderRef.current)
+            subOrderRef.current.value = `${square?.SubOrder ?? ''}` 
+
+        if(charNumberRef.current)
+            charNumberRef.current.value = `${square?.CharNumber ?? ''}` 
 
     },[square])
 
@@ -224,6 +241,10 @@ const EditSquareGovenorSigil = ({ isOpen, hasCloseBtn, onClose, children, square
             </tr>
             
         </table>
+        <div>Aethry:  <input maxLength={2} ref={aethryRef} size={2} onChange={(e)=>handleEdit('aethyr', e)}/><br/>
+             SubOrder:<input maxLength={2} ref={subOrderRef} size={2} onChange={(e)=>handleEdit('subOrder', e)}/><br/>
+             Char#:   <input maxLength={1} ref={charNumberRef} size={1} onChange={(e)=>handleEdit('charNumber', e)}/><br/>
+        </div>
         <div>Org Table Letter: <input maxLength={1} ref={originalTableLetterRef} size={1} onChange={(e)=>handleEdit('originalTableLetter', e)}/>
             <input type="checkbox" ref={originalTableIsUpperRef} onChange={(e)=>handleEdit('originalTableIsUpper', e)}/>
         </div>

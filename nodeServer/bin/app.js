@@ -31,8 +31,8 @@ const sqlServerConfig_1 = require("./sqlServerConfig");
 const sql = __importStar(require("mssql"));
 const app = (0, express_1.default)();
 const port = 3000;
-const generateUpdateCommandText = (status) => {
-    var _a, _b, _c;
+const generateUpdateSquareCommandText = (status) => {
+    var _a, _b, _c, _d, _e, _f;
     let sql = `UPDATE Enochian.TWatchTowerLayout SET `;
     sql += `GovernorSigilNorth = ${(status === null || status === void 0 ? void 0 : status.north) ? 1 : 0}, `;
     sql += `GovernorSigilNorthEast = ${(status === null || status === void 0 ? void 0 : status.northeast) ? 1 : 0}, `;
@@ -49,11 +49,24 @@ const generateUpdateCommandText = (status) => {
     sql += `ReformedTableLetter = '${(_b = status === null || status === void 0 ? void 0 : status.reformedTableLetter) !== null && _b !== void 0 ? _b : ''}', `;
     sql += `ReformedTableIsUpper = ${(status === null || status === void 0 ? void 0 : status.reformedTableIsUpper) ? 1 : 0}, `;
     sql += `GovernorAlignedTableLetter = '${(_c = status === null || status === void 0 ? void 0 : status.governorAlignedTableLetter) !== null && _c !== void 0 ? _c : ''}', `;
-    sql += `GovernorAlignedTableIsUpper = ${(status === null || status === void 0 ? void 0 : status.governorAlignedTableIsUpper) ? 1 : 0} `;
+    sql += `GovernorAlignedTableIsUpper = ${(status === null || status === void 0 ? void 0 : status.governorAlignedTableIsUpper) ? 1 : 0}, `;
+    sql += `AethyrNumber = ${(_d = status === null || status === void 0 ? void 0 : status.aethry) !== null && _d !== void 0 ? _d : 0}, `;
+    sql += `SubOrder = ${(_e = status === null || status === void 0 ? void 0 : status.subOrder) !== null && _e !== void 0 ? _e : 0}, `;
+    sql += `CharNumber = ${(_f = status === null || status === void 0 ? void 0 : status.charNumber) !== null && _f !== void 0 ? _f : 0} `;
     sql += `WHERE `;
     sql += `WatchTowerReferenceNumber = ${status === null || status === void 0 ? void 0 : status.watchTowerReferenceNumber} AND `;
     sql += `RowNumber = ${status === null || status === void 0 ? void 0 : status.rowNumber} AND `;
     sql += `ColumnNumber = ${status === null || status === void 0 ? void 0 : status.columnNumber}`;
+    console.log(sql);
+    return sql;
+};
+const enerateUpdateAethyrCommandText = () => {
+    let sql = `UPDATE Enochian.TAethyrs SET `;
+    sql += `SchuelerAethryLocation = @aethryLocation, `;
+    sql += `SchuelerAethyrDescription = @aethryDescription, `;
+    sql += `SchuelerAethyrComment = @aethryComment `;
+    sql += `WHERE `;
+    sql += `AethyrNumber = @aethryNumber`;
     console.log(sql);
     return sql;
 };
@@ -62,10 +75,28 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+app.get('/UpdateAethyr', (req, res) => {
+    var aethry = JSON.parse(req.query['Aethyr']);
+    console.warn(aethry);
+    var commandText = enerateUpdateAethyrCommandText();
+    sql.connect(sqlServerConfig_1.sqlConfig, function (err) {
+        var request = new sql.Request();
+        request.input('aethryLocation', sql.VarChar, aethry.schuelerAethyrLocation);
+        request.input('aethryDescription', sql.VarChar, aethry.schuelerAethyrDescription);
+        request.input('aethryComment', sql.VarChar, aethry.schuelerAethyrComment);
+        request.input('aethryNumber', sql.Int, aethry.aethyrNumber);
+        console.log(`cmd: ${commandText}`);
+        request.query(commandText, function (err, recordset) {
+            if (err)
+                console.log(err);
+            res.send(recordset === null || recordset === void 0 ? void 0 : recordset.rowsAffected);
+        });
+    });
+});
 app.get('/UpdateSquare', (req, res) => {
-    var sqare = JSON.parse(req.query['Square']);
-    console.warn(sqare);
-    var commandText = generateUpdateCommandText(sqare);
+    var square = JSON.parse(req.query['Square']);
+    console.warn(square);
+    var commandText = generateUpdateSquareCommandText(square);
     sql.connect(sqlServerConfig_1.sqlConfig, function (err) {
         var request = new sql.Request();
         console.log(`cmd: ${commandText}`);

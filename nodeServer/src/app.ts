@@ -27,9 +27,19 @@ interface SigilStatus {
     reformedTableIsUpper?: boolean,
     governorAlignedTableLetter?: string,
     governorAlignedTableIsUpper?: boolean,
+    aethry: number,
+    subOrder: number,
+    charNumber: number,
 }
 
-const generateUpdateCommandText = (status?: SigilStatus): string => {
+interface Aethyr {
+    aethyrNumber: number,
+    schuelerAethyrLocation: string,
+    schuelerAethyrDescription: string,
+    schuelerAethyrComment: string
+}
+
+const generateUpdateSquareCommandText = (status?: SigilStatus): string => {
     
     let sql = `UPDATE Enochian.TWatchTowerLayout SET ` 
         sql += `GovernorSigilNorth = ${status?.north ? 1 : 0}, `
@@ -47,16 +57,30 @@ const generateUpdateCommandText = (status?: SigilStatus): string => {
         sql += `ReformedTableLetter = '${status?.reformedTableLetter ?? ''}', `
         sql += `ReformedTableIsUpper = ${status?.reformedTableIsUpper ? 1 : 0}, `
         sql += `GovernorAlignedTableLetter = '${status?.governorAlignedTableLetter ?? ''}', `
-        sql += `GovernorAlignedTableIsUpper = ${status?.governorAlignedTableIsUpper ? 1 : 0} `
+        sql += `GovernorAlignedTableIsUpper = ${status?.governorAlignedTableIsUpper ? 1 : 0}, `
+        sql += `AethyrNumber = ${status?.aethry ?? 0 }, `
+        sql += `SubOrder = ${status?.subOrder ?? 0 }, `
+        sql += `CharNumber = ${status?.charNumber ?? 0} `
         sql += `WHERE `
         sql += `WatchTowerReferenceNumber = ${status?.watchTowerReferenceNumber} AND `
         sql += `RowNumber = ${status?.rowNumber} AND `
         sql += `ColumnNumber = ${status?.columnNumber}` 
-    
+
     console.log(sql)
     return sql
 }
 
+const enerateUpdateAethyrCommandText = () => {
+    let sql = `UPDATE Enochian.TAethyrs SET ` 
+        sql += `SchuelerAethryLocation = @aethryLocation, `
+        sql += `SchuelerAethyrDescription = @aethryDescription, `
+        sql += `SchuelerAethyrComment = @aethryComment `
+        sql += `WHERE `
+        sql += `AethyrNumber = @aethryNumber`
+
+    console.log(sql)
+    return sql
+}
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -64,11 +88,37 @@ app.use(function(req, res, next) {
     next();
 })
 
+app.get('/UpdateAethyr', (req, res) => {
+    var aethry = JSON.parse(req.query['Aethyr'] as string) as Aethyr
+    console.warn(aethry)
+
+    var commandText = enerateUpdateAethyrCommandText()
+
+    sql.connect(sqlConfig, function (err) {
+  
+          var request = new sql.Request();
+
+          request.input('aethryLocation',sql.VarChar, aethry.schuelerAethyrLocation)
+          request.input('aethryDescription',sql.VarChar, aethry.schuelerAethyrDescription)
+          request.input('aethryComment',sql.VarChar, aethry.schuelerAethyrComment)
+          request.input('aethryNumber',sql.Int, aethry.aethyrNumber)
+          
+          console.log(`cmd: ${commandText}`)
+          
+          request.query(commandText, function (err, recordset) {
+              
+            if (err) console.log(err)
+            res.send(recordset?.rowsAffected)
+        })
+
+    })
+})
+
 app.get('/UpdateSquare', (req, res) => {
 
-    var sqare = JSON.parse(req.query['Square'] as string) as SigilStatus
-    console.warn(sqare)
-    var commandText = generateUpdateCommandText(sqare)
+    var square = JSON.parse(req.query['Square'] as string) as SigilStatus
+    console.warn(square)
+    var commandText = generateUpdateSquareCommandText(square)
     
     sql.connect(sqlConfig, function (err) {
   
