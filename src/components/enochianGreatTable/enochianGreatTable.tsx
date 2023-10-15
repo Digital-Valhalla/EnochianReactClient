@@ -13,6 +13,7 @@ import oro from "../../assets/enochianQuadrantSigils/oro.png"
 import mph from "../../assets/enochianQuadrantSigils/mph.png"
 import oip from "../../assets/enochianQuadrantSigils/oip.png"
 import mor from "../../assets/enochianQuadrantSigils/mor.png"
+import EnochianBlackCrossTable from "./enochianBlackCrossTable/enochianBlackCrossTable"
 
 type watchTowerArrangement = {
     topLeft: number,
@@ -111,7 +112,7 @@ const EnochianGreatTable = () =>{
             </div>  
             
             <div className="enochian-great-table-child">
-                
+                <EnochianBlackCrossTable watchtowerReferenceNumber={6} startColumn={1} startRow={1}/>
             </div>
 
             <div className="enochian-great-table-child">

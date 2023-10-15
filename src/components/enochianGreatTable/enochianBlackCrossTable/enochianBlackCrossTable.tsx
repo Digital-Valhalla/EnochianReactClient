@@ -27,37 +27,11 @@ const EnochianBlackCrossTable = (props: {watchtowerReferenceNumber: number, star
                                 m.RowNumber == y + props.startRow &&
                                 m.WatchTowerReferenceNumber == props.watchtowerReferenceNumber)[0] as EnochianWatchtowerSquareType
 
-                            let className = [2, 11].includes(x) || [1].includes(y) ? 'enochian-font-svg-black' : 'enochian-font-svg-white'
-                            
-                            let borderColor = "yellowgreen"
-                            switch(props.watchtowerReferenceNumber){
-                                case(1): {
-                                    borderColor = "maroon"
-                                    break;
-                                }
-
-                                case(2): {
-                                    borderColor = "green"
-                                    break;
-                                }
-
-                                case(3): {
-                                    borderColor = "antiquewhite"
-                                    break;
-                                }
-
-                                case(4): {
-                                    borderColor = "black"
-                                    break;
-                                }
-
-                                default:{
-                                    break;
-                                }
-                            }
-                            
-                            square = <div key={`watchtowerSubQuadrant${props.watchtowerReferenceNumber}-row${letter.RowNumber}-col${letter.ColumnNumber}`} className="enochian-subquadrant-child" style={{borderColor: borderColor}}>
-                                        <EnochianWatchtowerSquare square={letter} letterClassName={className} backColor={[2,9].includes(letter.RowNumber) || [3, 10].includes(letter.ColumnNumber) ? "grey": ""}/>
+                            let className = 'enochian-font-svg-white'
+                            let borderColor = "antiquewhite"
+         
+                            square = <div key={`blackCrossTable${props.watchtowerReferenceNumber}-row${letter.RowNumber}-col${letter.ColumnNumber}`} className="enochian-subquadrant-child" style={{borderColor: borderColor}}>
+                                        <EnochianWatchtowerSquare square={letter} letterClassName={className} backColor={""}/>
                                      </div>
                         }
                         return square
